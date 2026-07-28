@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CampusHub</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN PAGE
+    ========================== -->
+
+    <section id="loginPage" class="page">
+
+        <div class="login-box">
+
+            <h1>🎓 CampusHub </h1>
+
+            <p>Your Personal University Assistant</p>
+
+            <input
+                type="text"
+                id="usernameInput"
+                placeholder="Enter your name"
+            >
+
+            <button onclick="loginUser()">
+
+                Login
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         DASHBOARD PAGE
+    ========================== -->
+
+    <section id="dashboardPage"
+             class="page hidden">
+
+
+        <!-- NAVBAR -->
+
+        <nav>
+
+            <h2>🎓 CampusHub </h2>
+
+            <div>
+
+                <span id="welcomeUser"></span>
+
+                <button
+                    onclick="logoutUser()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </nav>
+
+
+        <!-- HERO SECTION -->
+
+        <div class="hero">
+
+            <div class="ai-circle">
+
+                ✨
+
+            </div>
+
+            <p class="small-title">
+
+                ✨ Smart College Assistant
+
+
+            </p>
+
+            <h1>
+
+                Your Personal Campus Assistant
+
+            </h1>
+
+            <p>
+
+                Get information about your university,
+
+                scholarships, library, examinations,
+
+                offices and student services.
+
+            </p>
+
+
+            <button
+                class="main-ai-button"
+                onclick="openChat()">
+
+                🤖 Ask CampusHub 
+
+            </button>
+
+        </div>
+
+
+        <!-- STUDENT SERVICES -->
+
+        <section class="service-section">
+
+            <h2>🎓 Student Services</h2>
+
+            <div class="card-container">
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('idCard')">
+
+                    <span>💳</span>
+
+                    <h3>ID Card</h3>
+
+                    <p>
+
+                        Apply or report lost ID card
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('scholarship')">
+
+                    <span>🎓</span>
+
+                    <h3>Scholarship</h3>
+
+                    <p>
+
+                        Documents and application process
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('library')">
+
+                    <span>📚</span>
+
+                    <h3>Library</h3>
+
+                    <p>
+
+                        Books, timings and rules
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('examination')">
+
+                    <span>📝</span>
+
+                    <h3>Examination</h3>
+
+                    <p>
+
+                        Forms, dates and results
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('studentComplaint')">
+
+                    <span>⚠️</span>
+
+                    <h3>Student Complaint</h3>
+
+                    <p>
+
+                        Submit a complaint
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('campusMap')">
+
+                    <span>🗺️</span>
+
+                    <h3>Campus Map</h3>
+
+                    <p>
+
+                        Find important locations
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TEACHER SERVICES -->
+
+        <section class="service-section">
+
+            <h2>👨‍🏫 Teacher Services</h2>
+
+            <div class="card-container">
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('teacherComplaint')">
+
+                    <span>📝</span>
+
+                    <h3>Teacher Complaint</h3>
+
+                    <p>
+
+                        Submit and track complaints
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('facultyDocuments')">
+
+                    <span>📄</span>
+
+                    <h3>Faculty Documents</h3>
+
+                    <p>
+
+                        Important faculty forms
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('facultySchedule')">
+
+                    <span>📅</span>
+
+                    <h3>Academic Schedule</h3>
+
+                    <p>
+
+                        Classes and academic activities
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- OFFICES -->
+
+        <section class="service-section">
+
+            <h2>🏢 University Offices</h2>
+
+            <div class="card-container">
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('administration')">
+
+                    <span>🏛️</span>
+
+                    <h3>Administration Office</h3>
+
+                    <p>
+
+                        Certificates and official documents
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('accounts')">
+
+                    <span>💰</span>
+
+                    <h3>Accounts Department</h3>
+
+                    <p>
+
+                        Fees and payment information
+
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="service-card"
+                    onclick="showInformation('itSupport')">
+
+                    <span>💻</span>
+
+                    <h3>IT Support</h3>
+
+                    <p>
+
+                        Technical assistance
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMATION BOX -->
+
+        <div id="informationBox"
+             class="information-box hidden">
+
+            <button
+                class="close-button"
+                onclick="closeInformation()">
+
+                ✖
+
+            </button>
+
+            <div id="informationContent"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHAT PAGE
+    ========================== -->
+
+    <section id="chatPage"
+             class="chat-page hidden">
+
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h2>✨ CampusHub </h2>
+
+
+            <button
+                class="new-chat-button"
+                onclick="startNewChat()">
+
+                ＋ New Chat
+
+            </button>
+
+
+            <h3>My Conversations</h3>
+
+
+            <div id="chatHistory">
+
+                <!-- JavaScript will add chats here -->
+
+            </div>
+
+
+            <button
+                class="back-button"
+                onclick="goToDashboard()">
+
+                ← Back to Dashboard
+
+            </button>
+
+        </aside>
+
+
+        <!-- CHAT AREA -->
+
+        <main class="chat-area">
+
+
+            <!-- QUICK QUESTIONS -->
+
+            <div class="quick-questions">
+
+                <button
+                    onclick="askQuickQuestion(
+                    'What documents are required for scholarship?'
+                    )">
+
+                    Scholarship Process
+
+                </button>
+
+
+                <button
+                    onclick="askQuickQuestion(
+                    'Where is the library?'
+                    )">
+
+                    Where is the Library?
+
+                </button>
+
+
+                <button
+                    onclick="askQuickQuestion(
+                    'I lost my ID card'
+                    )">
+
+                    Lost ID Card
+
+                </button>
+
+
+                <button
+                    onclick="askQuickQuestion(
+                    'Where is the examination office?'
+                    )">
+
+                    Exam Office
+
+                </button>
+
+            </div>
+
+
+            <!-- MESSAGES -->
+
+            <div
+                id="messagesContainer"
+                class="messages-container">
+
+            </div>
+
+
+            <!-- MESSAGE INPUT -->
+
+            <div class="message-input-area">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask anything about your university..."
+                >
+
+                <button
+                    onclick="sendMessage()">
+
+                    ➤
+
+                </button>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- Connect JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
