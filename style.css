@@ -1,0 +1,760 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: Arial, sans-serif;
+
+}
+
+
+body {
+
+    background: #0b1224;
+
+    color: white;
+
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+/* =========================
+   LOGIN PAGE
+========================= */
+
+.page {
+
+    min-height: 100vh;
+
+}
+
+
+#loginPage {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.login-box {
+
+    width: 380px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    background: #151f35;
+
+    border: 1px solid #293858;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 40px rgba(91, 82, 255, 0.3);
+
+}
+
+
+.login-box h1 {
+
+    margin-bottom: 15px;
+
+    background: linear-gradient(
+        90deg,
+        #4b8bff,
+        #a936ff
+    );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.login-box p {
+
+    color: #aab5c9;
+
+    margin-bottom: 25px;
+
+}
+
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #33466d;
+
+    border-radius: 8px;
+
+    background: #0f172b;
+
+    color: white;
+
+}
+
+
+.login-box button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #3d82ff,
+        #a52bff
+    );
+
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+
+    padding: 20px 6%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid #24304a;
+
+}
+
+
+nav h2 {
+
+    background: linear-gradient(
+        90deg,
+        #4d8aff,
+        #a545ff
+    );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+nav button {
+
+    padding: 8px 14px;
+
+    border: 1px solid #33466d;
+
+    border-radius: 6px;
+
+    background: #17233d;
+
+    color: white;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+}
+
+
+.ai-circle {
+
+    width: 85px;
+
+    height: 85px;
+
+    margin: auto;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 35px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #4d8bff,
+        #a333ff
+    );
+
+    box-shadow:
+
+        0 0 30px #4c68ff,
+
+        0 0 80px #842bff;
+
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #6d91ff;
+
+}
+
+
+.hero h1 {
+
+    margin: 18px 0;
+
+    font-size: 45px;
+
+    background: linear-gradient(
+        90deg,
+        #4d8bff,
+        #a544ff
+    );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.hero p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    line-height: 1.6;
+
+    color: #aab4c7;
+
+}
+
+
+.main-ai-button {
+
+    margin-top: 25px;
+
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #3c83ff,
+        #a62cff
+    );
+
+}
+
+
+/* =========================
+   SERVICE SECTIONS
+========================= */
+
+.service-section {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    margin-bottom: 50px;
+
+}
+
+
+.service-section h2 {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.card-container {
+
+    display: grid;
+
+    grid-template-columns:
+
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 15px;
+
+}
+
+
+.service-card {
+
+    padding: 25px 15px;
+
+    text-align: center;
+
+    background: #151f35;
+
+    border: 1px solid #293858;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: #658cff;
+
+    background: #1b2948;
+
+}
+
+
+.service-card span {
+
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.service-card h3 {
+
+    margin-bottom: 8px;
+
+}
+
+
+.service-card p {
+
+    color: #9aa7bd;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   INFORMATION BOX
+========================= */
+
+.information-box {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 500px;
+
+    max-width: 90%;
+
+    padding: 30px;
+
+    background: #172238;
+
+    border: 1px solid #4769b4;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+
+}
+
+
+.close-button {
+
+    float: right;
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 20px;
+
+}
+
+
+.information-box h2 {
+
+    color: #6190ff;
+
+    margin-bottom: 20px;
+
+}
+
+
+.information-box p {
+
+    margin: 10px 0;
+
+    color: #c3cce0;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   CHAT PAGE
+========================= */
+
+.chat-page {
+
+    display: flex;
+
+    height: 100vh;
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar {
+
+    width: 250px;
+
+    padding: 20px;
+
+    background: #101a30;
+
+    border-right: 1px solid #26334f;
+
+}
+
+
+.sidebar h2 {
+
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #4d8bff,
+        #a545ff
+    );
+
+    -webkit-background-clip: text;
+
+    color: transparent;
+
+}
+
+
+.new-chat-button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 25px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #3d83ff,
+        #a52cff
+    );
+
+}
+
+
+.sidebar h3 {
+
+    color: #aeb9cd;
+
+    font-size: 14px;
+
+}
+
+
+#chatHistory {
+
+    margin-top: 15px;
+
+}
+
+
+.history-item {
+
+    padding: 12px;
+
+    margin-bottom: 8px;
+
+    border-radius: 8px;
+
+    background: #172744;
+
+    color: #d4dbea;
+
+    font-size: 13px;
+
+}
+
+
+.back-button {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    padding: 10px;
+
+    border: 1px solid #33466d;
+
+    border-radius: 7px;
+
+    background: #17233d;
+
+    color: white;
+
+}
+
+
+/* CHAT AREA */
+
+.chat-area {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* QUICK QUESTIONS */
+
+.quick-questions {
+
+    padding: 12px;
+
+    display: flex;
+
+    gap: 8px;
+
+    overflow-x: auto;
+
+    border-bottom: 1px solid #26334f;
+
+}
+
+
+.quick-questions button {
+
+    white-space: nowrap;
+
+    padding: 9px 14px;
+
+    border: 1px solid #2f4062;
+
+    border-radius: 8px;
+
+    background: #131e34;
+
+    color: #d2daea;
+
+}
+
+
+/* MESSAGES */
+
+.messages-container {
+
+    flex: 1;
+
+    padding: 30px;
+
+    overflow-y: auto;
+
+}
+
+
+.message {
+
+    max-width: 65%;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.user-message {
+
+    margin-left: auto;
+
+    background: linear-gradient(
+        90deg,
+        #3d82ff,
+        #9f2cff
+    );
+
+}
+
+
+.ai-message {
+
+    margin-right: auto;
+
+    background: #172238;
+
+    border: 1px solid #2d3c5c;
+
+}
+
+
+/* INPUT */
+
+.message-input-area {
+
+    display: flex;
+
+    padding: 15px;
+
+    border-top: 1px solid #26334f;
+
+}
+
+
+.message-input-area input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #2d3d5e;
+
+    border-radius: 8px;
+
+    background: #121c31;
+
+    color: white;
+
+}
+
+
+.message-input-area button {
+
+    width: 55px;
+
+    margin-left: 8px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #3d82ff,
+        #a52cff
+    );
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .sidebar {
+
+        width: 200px;
+
+    }
+
+}
